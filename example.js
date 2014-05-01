@@ -4,7 +4,7 @@ var memcached = require('memoi-memcached');
 
 var fibonacci = memoi(function(n) {
   return n < 2 ? n : fibonacci(n - 1) + fibonacci(n -2);
-}, memcached);
+}, memcached('localhost'));
 
 fib_10 = fibonacci(10); // 55
 
