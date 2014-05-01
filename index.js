@@ -8,7 +8,7 @@ module.exports = function() {
     throw new Error('No memcached connection string/object given.');
   } else if (typeof arguments[0] === 'object' && arguments[0].connect !== undefined) {
     memcached = arguments[0];
-  } else if (arguments.length == 1) {
+  } else if (arguments.length === 1) {
     memcached = new Memcached(arguments[0]);
   } else {
     memcached = new Memcached(arguments[0], arguments[1]);
